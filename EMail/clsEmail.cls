@@ -30,10 +30,11 @@ End Sub
 
 Private Function ReturnSignature() As String
 
+Dim FileExplorer As clsFileExplorer
 Dim path As String, extension As String
 'Dim signatures() As String, tempSig As String
 Dim sigFile As String
-
+                                
 path = "C:\Users\" & Environ$("UserName") & "\AppData\Roaming\Microsoft\Signatures\"
 extension = "*.htm"
 
@@ -57,6 +58,10 @@ End If
 'Loop
 ''-------------------------------------------------------------------------
 
+Set FileExplorer = New clsFileExplorer
+					
 ReturnSignature = ReadFile(path & sigFile)
 
+Set FileExplorer = Nothing
+						
 End Function
