@@ -45,7 +45,7 @@ End If
 
 End Sub
 
-Private Function Contains(Key As String) As Boolean 'col As Collection, Key As String) As Boolean
+Private Function Contains(Key As String) As Boolean 
 
 'Recieve compile error at line 'col (Key)' if collection used not scoped to function
 Dim col As Collection
